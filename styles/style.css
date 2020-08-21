@@ -1,3 +1,7 @@
+.fa-check-circle {
+    color: green;
+}
+
 /*
     DEMO STYLE
 */
@@ -37,13 +41,10 @@ a, a:hover, a:focus {
     outline: none !important;
     border: none;
 }
-
-.line {
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #ddd;
-    margin: 40px 0;
+.navbar-btn:hover {
+   color: #3399ff 
 }
+
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -57,11 +58,10 @@ a, a:hover, a:focus {
     overflow-x: hidden;
 }
 
-
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #555;
     color: #fff;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: bottom left;
@@ -69,77 +69,67 @@ a, a:hover, a:focus {
 #sidebar-right {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #555;
     color: #fff;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: bottom right;
 }
 
-
-#sidebar.active {
+#sidebar.active{
     margin-left: -250px;
     transform: rotateY(150deg);
 }
 #sidebar-right.active {
-    margin-left: -250px;
+    margin-right: -250px;
     transform: rotateY(-150deg);
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #2196f3;
 }
 #sidebar-right .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #2196f3;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid #555;
 }
 #sidebar-right ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid #555;
 }
 
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-#sidebar-right ul p {
-    color: #fff;
-    padding: 10px;
-}
 
 #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    color: #fff;
 }
 #sidebar-right ul li a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    color: #fff;
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+    background-color: rgba(44,130,201,0.5);
+    text-decoration: none;
 }
 #sidebar-right ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+    background-color: rgba(44,130,201,0.5);
+    text-decoration: none;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: #2196f3;
 }
-#sidebar-right ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-}
+
 
 
 a[data-toggle="collapse"] {
@@ -154,33 +144,17 @@ a[data-toggle="collapse"] {
     transform: translateY(-50%);
 }
 
-ul ul a {
+#sidebar ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #555;
 }
-
-ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
+#sidebar-right ul ul a {
     font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    padding-left: 30px !important;
+    background: #555;
 }
 
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
-
-a.article, a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
-}
 
 
 
@@ -189,7 +163,7 @@ a.article, a.article:hover {
 ----------------------------------------------------- */
 #content {
     width: 100%;
-    padding: 20px;
+    padding: 0!important;
     min-height: 100vh;
     transition: all 0.3s;
     overflow-x: hidden;
@@ -198,13 +172,11 @@ a.article, a.article:hover {
 #sidebarCollapse {
     width: 40px;
     height: 40px;
-    background: #f5f5f5;
     cursor: pointer;
 }
 #sidebarCollapseRight {
     width: 40px;
     height: 40px;
-    background: #f5f5f5;
     cursor: pointer;
 }
 
@@ -218,33 +190,25 @@ a.article, a.article:hover {
     transition-delay: 0.2s;
 }
 #sidebarCollapseRight span {
-    width: 80%;
+    /*width: 80%;
     height: 2px;
     margin: 0 auto;
     display: block;
     background: #555;
     transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
-    transition-delay: 0.2s;
+    transition-delay: 0.2s;*/
 }
 
 #sidebarCollapse span:first-of-type {
     transform: rotate(45deg) translate(2px, 2px);
 }
-#sidebarCollapseRight span:first-of-type {
-    transform: rotate(45deg) translate(2px, 2px);
-}
 #sidebarCollapse span:nth-of-type(2) {
-    opacity: 0;
-}
-#sidebarCollapseRight span:nth-of-type(2) {
     opacity: 0;
 }
 #sidebarCollapse span:last-of-type {
     transform: rotate(-45deg) translate(1px, -1px);
 }
-#sidebarCollapseRight span:last-of-type {
-    transform: rotate(-45deg) translate(1px, -1px);
-}
+
 
 
 #sidebarCollapse.active span {
@@ -254,6 +218,7 @@ a.article, a.article:hover {
 }
 #sidebarCollapseRight.active span {
     transform: none;
+    color: #3399ff
     opacity: 1;
     margin: 5px auto;
 }
@@ -264,127 +229,15 @@ a.article, a.article:hover {
 ----------------------------------------------------- */
 @media screen and (max-width: 768px) {
     #sidebar {
-        min-width: 0px;  
+        min-width: 0px; 
+        width: 250px;
     }
     #sidebar-right {
-        min-width: 0px;  
+        min-width: 0px; 
+        width: 250px;      
     }
+    
 }
-
-/*--------------Navigation------------*/
-/*
-#nav-bar {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    cursor: default;
-}
-
-
-.navbar-brand img {
-    height: 100px;
-    padding-left: 30px;
-    cursor: default;
-}
-
-.navbar-nav li {
-    padding: 0 10px;
-}
-
-.navbar-nav li a {
-    float: right;
-    text-align: left;
-    display: block;
-}
-
-#nav-bar ul li a:hover {
-    color: #007bff!important;
-}
-
-.navbar {
-    background: #fff;
-}
-
-.navbar-toggler {
-    border: none!important;
-}
-
-.nav-link {
-    color: #555!important;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.nav-link span
-{
-    color: #2196f3;
-}
-
-@media only screen and (max-width: 981px) {
-.navbar-toggler-item{
-    display: block;
-    float: right;
-}
-#myLinks{
-    display: none;
-    overflow: hidden;
-    margin-left: 0vw;
-}
-.navbar-brand {
-    margin-left: 60vw;
-    height:100px;
-}
-.navbar-toggler {
-    border: none!important;
-    position: absolute; 
-    top: 50px;
-}
-#titlu {
-    display: none;
-}
-}
-
-
-@media only screen and (min-width: 981px){
-#navigationBar {
-  position: fixed;
-  top:0;
-  width: 100%;
-}
-#navigationBar ul li:hover a{
-    background-color: white;
-}
-.navbar-brand img {
-    height: 110px;
-    padding-left: 30px;
-    margin-left: 0vw;
-    top: 0;
-    cursor: default;
-}
-.navbar-brand {
-    margin-left: 0;
-}  
-#titlu {
-    font-family: Times New Yorker, serif;
-    font-style: italic;
-    color: #666666;
-    text-align: center;
-    font-size: 30px;
-    position: absolute;
-    left: 35%;
-    top: 25px;
-} 
-#myLinks {
-    position: absolute;
-    right: 0;
-    top: 25px;
-}
-}
-*/
-.openbtn1:hover {
-  color: #3399ff;
-}
-
 
 /*--------------------Slider--------------*/
 
@@ -507,157 +360,56 @@ div.col-md-6.findButton{
     color: #efefef !important;
     
 }
-
 .inner-container {
     text-align: center;
-    }
-
+}
 #services h1 {
     text-align: center;
     color: #efefef !important;
     padding-bottom: 10px;
 }
-
-#services h1::after {
-    content: '';
-    background: #efefef;
-    display: block;
-    height: 3px;
-    width: 170px;
-    margin: 20px auto 5px;
+#services .card {
+    background-color: transparent!important;
+    color: #fff;
+    border: none!important;
 }
-
-.services {
-    margin-top: 10px;
-    
+#services a:hover {
+    text-decoration: none;
 }
-.row.services{
-    margin-left: 15%;
+#services .card:hover{
+    transform: scale(1.2);
+    text-shadow: 1px 2px #333;
+    background-color: #53a7ea;
 }
-
-.icon {
-    font-size: 40px;
-    margin: 20px auto;
-    padding: 20px;
-    height: 80px;
-    width: 80px;
-    border: 1px solid #fff;
-    border-radius: 50%;
+@media only screen and (min-width: 768px){
+    .mb-4 {
+    margin-left: 50px;
 }
-
-#services p{
-    font-size: 14px;
-    margin-top: 40px;
-    color: #ccc;
 }
-
-.services .col-md-3:hover {
-    background: #007bff;
-    cursor: pointer;
-    transition: 0.7s;
-}
-
-
 /*----------------Preturi-------------*/
-
-#price {
-    padding: 60px 10px;
-    background: #efefef;
-    
-}
-.container h1{
-    color: #666666;
+#price .container h1{
+    color: #555;
     font-family: Georgia, serif;
+    padding: 10px;
 }
 
-.single-price {
-    margin: 20px auto;
-    float: left;
-    width: 100%;
-    background-color: #fff;
-    transition: 0.5s;
+#price .card {
+    text-align: center;
 }
-
-.single-price:hover {
+#price .card:hover {
     box-shadow: 0 2px 20px #333;
 }
-
-.price-head {
-    background-color: #2196f3;
-    float: left;
-    padding: 10px 5px;
-    text-align: center;
-    width: 100%;
+#price .card-body ul li {
+    list-style-type: none;
 }
-
-.price-head h2 {
-    color: #fff;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    padding: 5px;
-    text-transform: uppercase;
-}
-
-.price-head p {
-    font-size: 25px;
-    color: #ccc;
-    font-weight: bold;
-    line-height: 30px;
-}
-
-#price span {
-    font-size: 15px;
-}
-
-.price-content {
-    float: left;
-    width: 100%;
-    padding: 0 15px;
-}
-
-.price-content ul li {
-    border-bottom: 1px solid #efefef;
-    padding: 15px 10px;
-    list-style: none;
-}
-
-ul li:last-child {
-    border: none;
-}
-
 .fa-check-circle-o {
     color: green;
     margin-right: 10px;
     font-size: 20px;
 }
-
-.price-button {
-    float: left;
-    padding: 15px 15px 30px;
-    text-align: center;
-    width: 100%;
+.card-title1 {
+    color: #000;
 }
-
-.buy-btn {
-    background-color: #2196f3;
-    border-radius: 3px;
-    display: inline-block;
-    font-size: 18px;
-    padding: 15px 50px;
-    transition: 0.5s;
-}
-
-.buy-btn:hover {
-    border-color: 1px solid #fff;
-    background-color: #3f51b5;
-}
-
-a {
-    text-decoration: none!important;
-    color: #fff!important;
-}
-
 
 
 /*----------------Contact----------*/
@@ -708,3 +460,508 @@ a {
 /*------------Footer---------*/
 
 html, body {width: auto!important; overflow-x: hidden!important} 
+
+
+
+/*---------------------------------------------
+--------------ABOUT PAGE STYLING---------------
+-----------------------------------------------*/
+.titlu-about{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-family: Times New Yorker, serif;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+    margin-left: 2vw;
+}
+.text-about {
+    padding: 15px;
+}
+.text-about h2{
+    text-align: center;
+    font-family: cursive;
+    color: #666;
+    padding: 15px;
+}
+/*Animatie*/
+.animate__animated {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+}
+/* This only changes this particular animation duration */
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+
+/* This changes all the animations globaly */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+.animate__animated {
+  --animate-repeat: 2;
+}
+}
+
+.text {
+    padding: 15px;
+}
+/*Animatie*/
+.animate__animated {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+}
+/* This only changes this particular animation duration */
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+
+/* This changes all the animations globaly */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+.animate__animated {
+  --animate-repeat: 2;
+}
+}
+
+/*Content*/
+.alignment {
+    margin-left: 2vw;
+}
+
+.alignment1 {
+    text-align: center;
+}
+
+.rebus-logo {
+    text-align: center;
+}
+
+.rebus span,
+.rebus1 span,
+.rebus2 span,
+.rebus3 span,
+.rebus4 span,
+.rebus5 span,
+.rebus6 span,
+.rebus7 span,
+.rebus8 span {
+    letter-spacing: 2px;
+    font-style: bold;
+    color: royalblue;
+    letter-spacing: 5px;
+}
+
+.rebus1 {
+    margin-left: -25px;
+}
+
+.rebus2 {
+    margin-left: -10px;
+}
+
+.rebus3 {
+    margin-left: 38px;
+}
+
+.rebus4 {
+    margin-left: 95px;
+}
+
+.rebus5 {
+    margin-left: 5px;
+}
+
+.rebus6 {
+    margin-left: 80px;
+}
+
+.rebus7 {
+    margin-left: 50px;
+}
+
+
+.text-body,
+.types,
+.description {
+    margin-left: 10px;
+}
+
+
+
+.row>.column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color:#0f0d0d;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #efefef;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+.numbertext{
+    background-color: transparent;
+}
+
+/* Next & previous buttons care au disparut :-??? */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: transparent;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+img {
+    margin-bottom: -4px;
+}
+.titlu-about img:hover {
+    opacity: 0.5;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/*-----------------------SOCIALIZARE-----------------*/
+
+.facebook {
+    float: right;
+    padding: 20px 30px 30px 20px;
+    font-size: 25px;
+}
+
+
+/*--------------------footer----------*/
+
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+}
+
+
+
+
+/*---------------------------------------------
+--------------PRELUCRARE PAGE STYLING---------------
+-----------------------------------------------*/
+
+.process-title {
+    font-family: Times New Yorker, serif;
+    font-style: italic;
+    color: black;
+    text-align: center;
+    margin-left: 10%;
+    padding-top: 5px;
+    font-size: 25px;
+}
+.process-title h1{
+    margin: 0;
+    padding: 0;
+}
+.videoclip {
+    width: 760px;
+     height: 515px;
+}
+
+.column1 {
+    float: left;
+    width: 50%;
+    padding-top: 0;
+}
+
+
+
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text-prelucrare, .titlu-prelucrare {
+    font-size: 17px;
+    margin-left: 10px;
+    padding: 15px 10px 10px 10px;
+}
+.text-centrat, .titlu-prelucrare {
+    font-size: 16px;
+    text-align: center;
+    font-size: 16px; 
+}
+
+.process-text {
+    margin-left: 15px;
+    padding: 10px;
+    font-style: bold;
+}
+.bottom-text{
+    text-align: center;
+}
+
+/*RESPONSIVE*/
+@media only screen and (min-width: 1295px) {
+.process-title{
+    font-family: Times New Yorker, serif;
+    font-style: italic;
+    color: black;
+    text-align: center;
+    margin-right: 10%;
+    padding-top: 5px;
+    font-size: 25px;
+}
+.videoclip {
+    width: 100%;
+}
+}
+
+@media only screen and (max-width: 1295px){
+.process-title{
+    font-family: Times New Yorker, serif;
+    font-style: italic;
+    color: black;
+    text-align: center;
+    margin-right: 10%;
+    padding-top: 5px;
+    font-size: 25px;
+}
+.column1 {
+    width: 50%;
+}
+.videoclip {
+    width: 100%;
+}
+}
+
+
+ @media (max-width: 981px) {
+
+.title {
+    margin: 0;
+}
+
+.column1 {
+    width: 100%;
+    padding-top: 0;
+}
+.videoclip {
+    width: 100%;
+    height: 250px;
+ }
+}
+
+
+
+
+/*---------------------------
+-----ANIMATIE CONT PAGE------
+---------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+.content-cont{
+    background-image: url('../img/slider3.1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.card-cont {
+    height: 370px;
+margin-top: 15vh;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.8) !important;
+}
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #fff;
+}
+
+.social_icon span:hover{
+color: #2196f3;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #2196f3;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: #fff!important;
+background-color: #2196f3!important;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white!important;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}

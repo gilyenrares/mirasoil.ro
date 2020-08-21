@@ -127,3 +127,16 @@ if(isset($_SESSION["cart_item"])){
 </div>
 </BODY>
 </HTML>
+
+
+
+
+
+<body class="wrapper">
+	<?php lef-side ?>
+	<div class="content">
+		<?php nav ?>
+		webpage
+	</div>
+	<?php righ-side ?>
+</body>
