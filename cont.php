@@ -5,11 +5,11 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="...">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <script type="text/javascript" src="js/main.js"></script>    
+    <link rel="stylesheet" type="text/css" href="styles/style.css">    
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script type="text/javascript" src="js/main.js"></script>
 </header>
 
 <body class="wrapper"> 
@@ -27,7 +27,7 @@
 				<h3>Sign In</h3>
 				<div class="d-flex justify-content-end social_icon">
 					<span><a href="https:/www.facebook.com/mirasoil16/"><i class="fab fa-facebook-square"></i></a></span>
-					<span><a href="https://g.page/mirasoil16"><i class="fab fa-google-plus-square"></i></a></span>
+					<span><a href="https://g.page/mirasoil16"><i class="fab fa-google-plus-g"></i></a></span>
 					<span><a href="https:/www.instagram.com/mirasoil16/"><i class="fab fa-instagram-square"></i></a> </span>
 				</div>
 			</div>

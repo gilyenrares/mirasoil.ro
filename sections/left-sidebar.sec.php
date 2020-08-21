@@ -9,7 +9,7 @@
                     <a href="index.php"><i class="fas fa-home"></i> Acasă</a>
                 </li>
                 <li>
-                    <a href="About.php"><i class="far fa-address-card"></i> Despre</a>
+                    <a href="about.php"><i class="far fa-address-card"></i> Despre</a>
                 </li>
                 <li><!-- Link with dropdown items -->
                     <a class="dropdown-toggle" href="#homeSubmenu" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="homeSubmenu"><i class="fas fa-list-ol"></i> Produse</a>

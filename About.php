@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="ro">
-<header>
+<head>
+    <title>Despre Noi</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="styles/style.css">    
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-</header>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script type="text/javascript" src="js/main.js"></script>  
+</head>
 <body class="wrapper">
         <!--Left Sidebar Holder --> 
 <?php include 'sections/left-sidebar.sec.php'; ?>
@@ -330,21 +332,6 @@
     <?php include 'sections/footer.sec.php'; ?>
     </div>
     <!--Right Sidebar Holder --> 
-    <?php include 'sections/right-sidebar.sec.php' ?>
-<!--Script-->
-<script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-                $(this).toggleClass('active');
-            });
-        });
-         $(document).ready(function () {
-            $('#sidebarCollapseRight').on('click', function () {
-                $('#sidebar-right').toggleClass('active');
-                $(this).toggleClass('active');
-            });
-        });
-    </script>   
+    <?php include 'sections/right-sidebar.sec.php' ?> 
 </body>
 </html>
