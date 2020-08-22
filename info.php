@@ -80,16 +80,10 @@
 	</div>
 </div>
 
-
-
-
 <!----------------Footer----------->
-    <?php include 'sections/footer.sec.php'; ?>
-    </div>
-    <!--Right Sidebar Holder --> 
-    <?php include 'sections/right-sidebar.sec.php' ?>
-   
-    <script src="js/prelucrare.js"></script>
+<?php include 'sections/footer.sec.php'; ?>
+</div>
+<!--Right Sidebar Holder --> 
+<?php include 'sections/right-sidebar.sec.php' ?>
 </body>
-
 </html>

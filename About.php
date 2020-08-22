@@ -12,85 +12,85 @@
     <script type="text/javascript" src="js/main.js"></script>  
 </head>
 <body class="wrapper">
-        <!--Left Sidebar Holder --> 
-<?php include 'sections/left-sidebar.sec.php'; ?>
 
-    <!-- Page Content Holder -->
+<!--Left Sidebar Holder --> 
+    <?php include 'sections/left-sidebar.sec.php'; ?>
+
+<!-- Page Content Holder -->
     <div id="content">
-         <?php include'sections/navigation.sec.php' ?>
-
-    <div class="titlu-about">
-        <h1 class="animate__animated animate__rubberBand animate__repeat-2">Povestea noastră</h1> 
-    </div>
-
-    <div class="text-about">
-        <p>
-            În ceea ce ne privește pe noi, totul a început acum 4 ani, în anul 2016 mai exact, când am decis să facem această plantație. Pe teritoriul fertil al zonei noastre, a fost destul de dificil de întreținut din cauza ierburilor care creșteau printre rânduri,
-            însă cu mult efort am reușit să-i facem față.<br>În primul an, producția nu a fost una destul de mare însă asta se întâmplă în general în primul an de recoltă, urmând ca abia din al treilea an să poată produce o cantitate suficientă
-            de ulei.
-        </p>
-    <h2>Galerie</h2>
-    </div>
-
-    <div class="row">
-        <div class="column">
+        <?php include'sections/navigation.sec.php' ?>
+        <div class="container">
+            <div class="titlu-about">
+                <h1 class="animate__animated animate__rubberBand animate__repeat-2">Povestea noastră</h1> 
+            </div>
+            <div class="text-about">
+                <p>
+                    În ceea ce ne privește pe noi, totul a început acum 4 ani, în anul 2016 mai exact, când am decis să facem această plantație. Pe teritoriul fertil al zonei noastre, a fost destul de dificil de întreținut din cauza ierburilor care creșteau printre rânduri,
+                    însă cu mult efort am reușit să-i facem față.<br>În primul an, producția nu a fost una destul de mare însă asta se întâmplă în general în primul an de recoltă, urmând ca abia din al treilea an să poată produce o cantitate suficientă
+                    de ulei.
+                </p>
+                <h2>Galerie</h2>
+            </div>
+        </div>
+    <div class="row m-0 p-1">
+        <div class="col-3 p-1">
             <img src="img/lav1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav5.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav8.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav7.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav6.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav9.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav32.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav34.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav15.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav11.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav10.jpg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav20.jpg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav36.jpg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav18.jpg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav17.jpg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav22.jpg" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav14.jpg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
         </div>
-        <div class="column">
+        <div class="col-3 p-1">
             <img src="img/lav25.jpg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
         </div>
     </div>
@@ -139,9 +139,6 @@
                 <img src="img/lav9.jpg" alt="Anul3" style="width:100%">
             </div>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
             <div class="caption-container">
                 <p id="caption"></p>
             </div>
@@ -177,7 +174,6 @@
                 <div class="numbertext">16 / 20</div>
                 <img src="img/lav18.jpg" alt="Anul1" style="width:100%">
             </div>
-
             <div class="mySlides">
                 <div class="numbertext">17 / 20</div>
                 <img src="img/lav17.jpg" alt="Anul1" style="width:100%">
@@ -193,68 +189,69 @@
                 <div class="numbertext">20 / 20</div>
                 <img src="img/lav25.jpg" alt="Anul1" style="width:100%">
             </div>
-            
-
-
-            <div class="column">
-                <img class="demo cursor" src="img/lav1.jpg" style="width:100%" onclick="currentSlide(1)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav2.jpg" style="width:100%" onclick="currentSlide(2)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav3.jpg" style="width:100%" onclick="currentSlide(3)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav5.jpg" style="width:100%" onclick="currentSlide(4)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav6.jpg" style="width:100%" onclick="currentSlide(5)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav7.jpg" style="width:100%" onclick="currentSlide(6)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav8.jpg" style="width:100%" onclick="currentSlide(7)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav9.jpg" style="width:100%" onclick="currentSlide(8)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav32.jpg" style="width:100%" onclick="currentSlide(9)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav34.jpg" style="width:100%" onclick="currentSlide(10)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav15.jpg" style="width:100%" onclick="currentSlide(11)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav11.jpg" style="width:100%" onclick="currentSlide(12)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav10.jpg" style="width:100%" onclick="currentSlide(13)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav20.jpg" style="width:100%" onclick="currentSlide(14)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav36.jpg" style="width:100%" onclick="currentSlide(15)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav18.jpg" style="width:100%" onclick="currentSlide(16)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav17.jpg" style="width:100%" onclick="currentSlide(17)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav22.jpg" style="width:100%" onclick="currentSlide(18)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav14.jpg" style="width:100%" onclick="currentSlide(19)" >
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="img/lav25.jpg" style="width:100%" onclick="currentSlide(20)" >
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="row m-0 bg-dark">
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav1.jpg" style="width:100%" onclick="currentSlide(1)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav2.jpg" style="width:100%" onclick="currentSlide(2)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav3.jpg" style="width:100%" onclick="currentSlide(3)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav5.jpg" style="width:100%" onclick="currentSlide(4)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav6.jpg" style="width:100%" onclick="currentSlide(5)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav7.jpg" style="width:100%" onclick="currentSlide(6)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav8.jpg" style="width:100%" onclick="currentSlide(7)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav9.jpg" style="width:100%" onclick="currentSlide(8)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav32.jpg" style="width:100%" onclick="currentSlide(9)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav34.jpg" style="width:100%" onclick="currentSlide(10)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav15.jpg" style="width:100%" onclick="currentSlide(11)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav11.jpg" style="width:100%" onclick="currentSlide(12)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav10.jpg" style="width:100%" onclick="currentSlide(13)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav20.jpg" style="width:100%" onclick="currentSlide(14)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav36.jpg" style="width:100%" onclick="currentSlide(15)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav18.jpg" style="width:100%" onclick="currentSlide(16)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav17.jpg" style="width:100%" onclick="currentSlide(17)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav22.jpg" style="width:100%" onclick="currentSlide(18)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav14.jpg" style="width:100%" onclick="currentSlide(19)" >
+                </div>
+                <div class="col-1 p-1">
+                    <img class="demo cursor" src="img/lav25.jpg" style="width:100%" onclick="currentSlide(20)" >
+                </div>
             </div>
         </div>
     </div>
@@ -283,7 +280,7 @@
   <img src='img/lav9.jpg' alt=''>
   <img src='img/lav18.jpg' alt=''>
 </div>-->
-    <div class="text-about">
+    <div class="text-about container">
         <p>
             Am decis astfel să ne dedicăm timpul acestei plantații din dragoste și pasiune pentru produse naturale, fapt pentru care am decis să înființăm un proiect susținut din fonduri europene pentru a răspândi calitatea produselor noastre pe piață. În anul 2019,
             am parcurs formalitățile pentru încadrarea în proiect, urmând ca anul acesta să fie aprobat și pus în aplicare. Între timp, anul 3 de cultivare ne-a adus o oarecare surpriză. Datorită îngrijirii atente, plantația a atins în luna iulie 2019
