@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-	<title>Cont</title>
+	<title>Delogare</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="...">
@@ -22,21 +22,31 @@
 		<div class="d-flex justify-content-center">
 			<div class="card card-cont">
 				<div class="card-header">
-					<h3>Contul Meu</h3>
+					<h3>Delogare</h3>
 					<div class="d-flex justify-content-end social_icon">
 						<span><a href="https:/www.facebook.com/mirasoil16/"><i class="fab fa-facebook-square"></i></a></span>
 						<span><a href="https://g.page/mirasoil16"><i class="fab fa-google-plus-g"></i></a></span>
 						<span><a href="https:/www.instagram.com/mirasoil16/"><i class="fab fa-instagram-square"></i></a> </span>
 					</div>
 				</div>
-				<div class="card-body text-white">
-          			<p>Tip Cont: <?php echo $_SESSION['tipCont']; ?></p>
-          			<p>Nume: <?php echo $_SESSION['numeUtil']; ?></p>	
-          			<p>Prenume: <?php echo $_SESSION['prenumeUtil']; ?></p>	
-          			<p>Adresa: <?php echo $_SESSION['adresaUtil']; ?></p>
-          			<p>Email: <?php echo $_SESSION['emailUtil']; ?></p>			
+				<div class="card-body">
+					<form action="includes/logout.inc.php" method="POST">
+						<div class="form-group">
+							<h5 class="text-white">Ești sigur/ă că vrei să te deconectezi?</h5>
+						</div>
+						<div class="form-group">
+							<button type="submit" name="logout-submit" class="btn btn-primary float-right px-5" data-toggle="modal" data-target="#errorsystem">Da</button>
+						</div>
+					</form>
 				</div>
-				
+				<div class="card-footer">
+					<div class="d-flex justify-content-center links">
+						Don't have an account?<a href="inregistrare.php">Sign Up</a>
+					</div>
+					<div class="d-flex justify-content-center">
+						<a href="#">Forgot your password?</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

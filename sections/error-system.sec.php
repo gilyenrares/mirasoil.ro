@@ -5,8 +5,8 @@
   <div class="modal-dialog  modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header bg-primary">
-        <img class="mr-5" src="img/Logo-mirasoil.png" height="30" width="30" alt="mirasoil.ro logo">
-        <h5 class="modal-title" id="errorSystem">MiraSoil </h5>
+        <img class="mr-5" src="img/Logo-mirasoil.png" height="50" width="50" alt="mirasoil.ro logo">
+        <h5 class="modal-title pt-3" id="errorSystem">MiraSoil </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

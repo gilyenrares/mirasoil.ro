@@ -5,33 +5,46 @@
             </div>
             <?php
             $text=$_SERVER['PHP_SELF'];
-            $rest = substr("$text", 1);
-            echo '<ul class="list-unstyled components">';
-            if ($rest === 'cont.php') {
+            $rest = substr("$text", 13);
+            echo '<ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#secondarySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-user"></i> Cont</a>
+                        <ul class="collapse list-unstyled" id="secondarySubmenu">';
+            if (isset($_SESSION['utilId'])) {
                 echo '<li class="active">
-                        <a href="#secondarySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-user"></i> Cont</a>
-                        <ul class="collapse list-unstyled" id="secondarySubmenu">
-                            <li>
-                                <a href="cont.php"><i class="fa fa-user"></i> Contul meu</a>
-                            </li>
-                            <li>
-                                <a href="cont.php"><i class="fa fa-cog"></i> Setări</a>
-                            </li>
-                        </ul>
-                    </li>';  
-            } else {
-                echo '<li>
-                        <a href="#secondarySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-user"></i> Cont</a>
-                        <ul class="collapse list-unstyled" id="secondarySubmenu">
-                            <li>
-                                <a href="cont.php"><i class="fa fa-user"></i> Contul meu</a>
-                            </li>
-                            <li>
-                                <a href="cont.php"><i class="fa fa-cog"></i> Setări</a>
-                            </li>
-                        </ul>
+                        <a href="cont.php"><i class="fa fa-user"></i> Contul meu</a>
+                    </li>
+                    <li>
+                        <a href="cont.php"><i class="fa fa-cog"></i> Setări</a>
+                    </li>
+                    <li>
+                        <a href="delogare.php"><i class="fas fa-sign-out-alt"></i> Delogare</a>
                     </li>';
             }
+            elseif ($rest === 'logare.php') {
+                echo '<li class="active">
+                            <a href="logare.php"><i class="fas fa-sign-in-alt"></i> Logare</a>
+                    </li>
+                    <li>
+                        <a href="inregistrare.php"><i class="fas fa-user-plus"></i> Inregistrare</a>
+                    </li>'; 
+            } elseif ($rest === 'inregistrare.php'){
+                echo '<li>
+                        <a href="logare.php"><i class="fas fa-sign-in-alt"></i> Logare</a>
+                    </li>
+                    <li class="active">
+                        <a href="inregistrare.php"><i class="fas fa-user-plus"></i> Inregistrare</a>
+                    </li>';
+            } else {
+                echo '<li>
+                        <a href="logare.php"><i class="fas fa-sign-in-alt"></i> Logare</a>
+                    </li>
+                    <li>
+                        <a href="inregistrare.php"><i class="fas fa-user-plus"></i> Inregistrare</a>
+                    </li>';  
+            } 
+            echo '  </ul>
+                </li>'; 
             if ($rest === 'transport.php') {
                 echo '<li class="active">
                         <a href="transport.php"><i class="fa fa-truck"></i> Transport</a>

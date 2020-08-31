@@ -1,5 +1,5 @@
   <?php 
-    session_start(); 
+    session_start();
     if (isset($_SESSION['currentSessionUrl'])) {
       $_SESSION['previousSessionUrl'] = $_SESSION['currentSessionUrl'];
     }
@@ -14,8 +14,9 @@
             <span></span>
         </button>
         <!-- Logo -->
-                <div class="d-flex justify-content-center"><span><a href="index.php"><img class="logo" src="img/Logo-mirasoil.png" height="100px"></a></span>
-                </div>
+        <div class="d-flex justify-content-center">
+            <span><a href="index.php"><img class="logo" src="img/Logo-mirasoil.png" height="100px"></a></span>
+        </div>
         <div class="butonDreapta">
         <button type="button" id="sidebarCollapseRight" class="navbar-btn d-inline-block ml-auto active">
           <span>
