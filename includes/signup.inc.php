@@ -2,7 +2,7 @@
 if (isset($_POST['signup-submit'])) {
   session_start();
 
-  require __DIR__.'/../includes/dbh.inc.php';
+  require 'dbh.inc.php';
 
   $email = $_POST['email'];
   $nume = $_POST['nume'];
@@ -37,7 +37,7 @@ if (isset($_POST['signup-submit'])) {
     exit();
   }
   //Method that checks if the First Name entered is valid and returns the user to signup with the valid info autofilled
-  elseif (!preg_match("/^[a-zA-Z0-9\s]*$/",$adresa)) {
+  elseif (!preg_match("/^[a-zA-Z0-9\s,.-]*$/",$adresa)) {
     $_SESSION['tempnume'] = $nume;
     $_SESSION['tempEmail'] = $email;
     $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> Adresa introdusa este invalida!';

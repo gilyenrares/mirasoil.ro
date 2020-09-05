@@ -30,22 +30,22 @@
                         <a class="dropdown-toggle" href="#homeSubmenu" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="homeSubmenu"><i class="fas fa-list-ol"></i> Produse</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li>
-                                <a href="produse.php">Ulei de lavandă</a>
+                                <a href="produs.php?codProdus=1">Ulei de lavandă</a>
                             </li>
                             <li>
-                                <a href="produse.php">Hidrolat de lavandă</a>
+                                <a href="produs.php?codProdus=2">Hidrolat de lavandă</a>
                             </li>
                             <li>
-                                <a href="produse.php">Săpun natural</a>
+                                <a href="produs.php?codProdus=3">Săpun natural</a>
                             </li>
                             <li>
-                                <a href="produse.php">Sirop</a>
+                                <a href="produs.php?codProdus=4">Sirop</a>
                             </li>
                             <li>
-                                <a href="produse.php">Buchete florale</a>
+                                <a href="produs.php?codProdus=6">Buchete florale</a>
                             </li>
                             <li>
-                                <a href="produse.php">Brichete</a>
+                                <a href="produs.php?codProdus=5">Brichete</a>
                             </li>
                         </ul>
                     </li>';  
@@ -54,22 +54,22 @@
                         <a class="dropdown-toggle" href="#homeSubmenu" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="homeSubmenu"><i class="fas fa-list-ol"></i> Produse</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li>
-                                <a href="produse.php">Ulei de lavandă</a>
+                                <a href="produs.php?codProdus=1">Ulei de lavandă</a>
                             </li>
                             <li>
-                                <a href="produse.php">Hidrolat de lavandă</a>
+                                <a href="produs.php?codProdus=2">Hidrolat de lavandă</a>
                             </li>
                             <li>
-                                <a href="produse.php">Săpun natural</a>
+                                <a href="produs.php?codProdus=3">Săpun natural</a>
                             </li>
                             <li>
-                                <a href="produse.php">Sirop</a>
+                                <a href="produs.php?codProdus=4">Sirop</a>
                             </li>
                             <li>
-                                <a href="produse.php">Buchete florale</a>
+                                <a href="produs.php?codProdus=6">Buchete florale</a>
                             </li>
                             <li>
-                                <a href="produse.php">Brichete</a>
+                                <a href="produs.php?codProdus=5">Brichete</a>
                             </li>
                         </ul>
                     </li>'; 

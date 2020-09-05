@@ -1,5 +1,6 @@
 <?php 
 if (isset($_POST['reset-request-submit'])) {
+	 session_start();
 	// Selector
 	$selector = bin2hex(random_bytes(8));
 	//	Token
@@ -15,8 +16,9 @@ if (isset($_POST['reset-request-submit'])) {
 	$sql = "DELETE FROM pwdreset WHERE pwdResetEmail=?";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		echo "There was an error, on reset";
-		exit();
+		$_SESSION['activityStatus'] = 'Cerere incompletă ...<br> A apărut o eroare de conexiune!';
+      	header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+      	exit();
 	} else{
 		mysqli_stmt_bind_param($stmt, "s", $userEmail);
 		mysqli_stmt_execute($stmt);
@@ -25,8 +27,9 @@ if (isset($_POST['reset-request-submit'])) {
 	$sql = "INSERT INTO pwdreset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) VALUES (?, ?, ?, ?);";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		echo "There was an error!";
-		exit();
+		$_SESSION['activityStatus'] = 'Cerere incompletă ...<br> A apărut o eroare de inregistrare a cereri !';
+      	header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+      	exit();;
 	} else{
 		$hashedToken = password_hash($token, PASSWORD_DEFAULT);
 		mysqli_stmt_bind_param($stmt, "ssss", $userEmail, $selector, $hashedToken, $expires);
@@ -47,8 +50,8 @@ if (isset($_POST['reset-request-submit'])) {
 	$headers .= "X-Mailer: PHP/".phpversion();
 
 	mail($to, $subject, $message, $headers);
-	header("Location: ../index.php?reset=success");
-	exit();
+	$_SESSION['activityStatus'] = 'Cerere trimisă ... <br> Un email a fost trimis cu instructiunile de resetare a parolei!';
+    header("Location: ..".$_SESSION['previousSessionUrl'].""]);
 }
 else {
 	header("Location: ../index.php");

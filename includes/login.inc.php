@@ -58,9 +58,9 @@ if(isset($_POST['login-submit'])){
           $_SESSION['prenumeUtil'] = $row['prenumeUtil'];
           $_SESSION['adresaUtil'] = $row['adresaUtil'];
           $_SESSION['emailUtil'] = $row['emailUtil'];
-          $_SESSION['activityStatus'] = 'Logare completă! Bine revenit, '.$row['numeUtil'].'! ';
+          $_SESSION['activityStatus'] = 'Logare completă! Bine ai revenit, '.$row['numeUtil'].'! ';
           unset($_SESSION['tempemailName']);
-          header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+          header("Location: ..".$_SESSION['previousSessionUrl'.""]);
           exit();
         }
         else {
@@ -81,6 +81,6 @@ if(isset($_POST['login-submit'])){
 }
 else {
   $_SESSION['activityStatus'] = 'Hey ...Hmm. <br>I see you =) trying :))';
-  header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+  header("Location: ..".$_SESSION['previousSessionUrl'.""]);
   exit();
 }

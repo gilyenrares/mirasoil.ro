@@ -77,10 +77,10 @@
 				</div>
 				<div class="card-footer">
 					<div class="d-flex justify-content-center links">
-						Ai deja un cont? <a href="logare.php">Logeaza-te</a>
+						Ai deja un cont? <a href="logare.php">Logheaza-te</a>
 					</div>
 					<div class="d-flex justify-content-center">
-						<a href="resetare-parola.php">Forgot your password?</a>
+						<a href="resetare-parola.php">A-ti uitat parola ?</a>
 					</div>
 				</div>
 			</div>

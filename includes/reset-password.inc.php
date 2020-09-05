@@ -61,7 +61,7 @@ if (isset($_POST["reset-password-submit"])) {
 							$sql = "DELETE FROM pwdreset WHERE pwdResetEmail=?";
 							$stmt = mysqli_stmt_init($conn);
 							if (!mysqli_stmt_prepare($stmt, $sql)) {
-								echo "There was an error!";
+								echo "There was an error, but your password has ben succesfuly changed";
 								exit();
 							} else{
 								mysqli_stmt_bind_param($stmt, "s", $userEmail);

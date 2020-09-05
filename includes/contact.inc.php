@@ -1,5 +1,6 @@
 <?php
 if (isset($_POST['contact-submit'])) {
+  session_start();
 
   require 'dbh.inc.php';
 
@@ -10,25 +11,46 @@ if (isset($_POST['contact-submit'])) {
 
 //Method that checks empty fields and returns the user to contact with the valid info autofilled
   if (empty($name) || empty($email) || empty($phone) || empty($msg)) {
-    header("Location: ../index.php?error=emptyfields&name=".$name."&email=".$email."&msg=".$msg."&phone=".$phone);
+    $_SESSION['tempName'] = $name;
+    $_SESSION['tempEmail'] = $email;
+    $_SESSION['tempPhone'] = $phone;
+    $_SESSION['tempMsg'] = $msg;
+    $_SESSION['activityStatus'] = 'Trimiterea mesajului este incompletă ... <br> Toate câmpurile sunt obligatorii !';
+    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
     exit();
   }
   //Method that checks if the Email entered is valid and returns the user to contact with the valid info autofilled
   elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header("Location: ../index.php?error=invalidEmail&msg=".$msg."&phone=".$phone."&name=".$name);
+    $_SESSION['tempName'] = $name;
+    $_SESSION['tempPhone'] = $phone;
+    $_SESSION['tempMsg'] = $msg;
+    $_SESSION['activityStatus'] = 'Trimiterea mesajului este incompletă ... <br> Emailul introdus nu este valid !';
+    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
     exit();
   }
     //Method that checks if the message entered is valid and returns the user to contact with the valid info autofilled
   elseif (!preg_match("/^[a-zA-Z0-9\s.,?!()]*$/",$msg)) {
-    header("Location: ../index.php?error=invalidMesage&email=".$email."&name=".$name."&phone=".$phone);
-    exit();
+    $_SESSION['tempName'] = $name;
+    $_SESSION['tempEmail'] = $email;
+    $_SESSION['tempPhone'] = $phone;
+    $_SESSION['activityStatus'] = 'Trimiterea mesajului este incompletă ... <br> Mesajul introdus conține caractere restricționate !';
+    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+    exit();;
   }
     elseif (!preg_match("/^[a-zA-Z\s]*$/",$name)) {
-    header("Location: ../index.php?error=invalidName$email=".$email."&msg=".$msg."&phone=".$phone);
+    $_SESSION['tempEmail'] = $email;
+    $_SESSION['tempPhone'] = $phone;
+    $_SESSION['tempMsg'] = $msg;
+    $_SESSION['activityStatus'] = 'Trimiterea mesajului este incompletă ... <br> Numele introdus conține caractere restricționate ! !';
+    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
     exit();
   }
   elseif (!preg_match("/^[0-9]*$/",$phone)) {
-    header("Location: ../index.php?error=invalidPhone&email=".$email."&name=".$name."&msg=".$msg);
+    $_SESSION['tempName'] = $name;
+     $_SESSION['tempEmail'] = $email;
+    $_SESSION['tempMsg'] = $msg;
+    $_SESSION['activityStatus'] = 'Trimiterea mesajului este incompletă ... <br> Numărul de telefon introdus conține caractere restricționate ! !';
+    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
     exit();
   }
   else {
@@ -40,8 +62,13 @@ if (isset($_POST['contact-submit'])) {
 
     //Method that check if the sql statement can run inside the database without error
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-      header("Location: ../contact.php?error=sqlUploadError");
-       exit();
+      $_SESSION['tempName'] = $name;
+      $_SESSION['tempEmail'] = $email;
+      $_SESSION['tempPhone'] = $phone;
+      $_SESSION['tempMsg'] = $msg;
+      $_SESSION['activityStatus'] = 'Trimiterea mesajului este incompletă ... <br> A apărut o eroare de conexiune cu baza de date !';
+      header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+      exit();
     }
     //Method that retrieves the input from users and uploads it to the database
     else {
@@ -58,7 +85,8 @@ if (isset($_POST['contact-submit'])) {
       $headers .= "Reply-to:".$email."\r\n";
       $headers .= "X-Mailer: PHP/".phpversion();
       mail($to, $subject, $message, $headers);
-      header("Location: ../index.php?message-submit=success");
+      $_SESSION['activityStatus'] = 'Multumim pentru mesaj, '.$name.' . <br> Revenim în cel mai scurt timp cu un răspuns.';
+      header("Location: ..".$_SESSION['currentSessionUrl'.""]);
       exit();
     }
   }

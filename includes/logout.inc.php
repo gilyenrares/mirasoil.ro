@@ -2,4 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: ../index.php");
+$_SESSION['activityStatus'] = 'Contul a fost deconectat cu succes!';
+header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+exit();

@@ -10,7 +10,7 @@ if ($resultCheck > 0) {
 		echo '<div class="col-sm-8 col-md-6 col-lg-4 mb-3 h-100">
                 <div class="card w-100"> 
                     <img src="'.$row["image"].'" alt="'.$row["denumire"].'"height="425">
-                    <h1 class="mb-5">'.$row["denumire"].'</h1>
+                    <a class="card-link" href="produs.php?codProdus='.$row["codProdus"].'"><h1 class="mb-5">'.$row["denumire"].'</h1></a>
                     <p class="price">'.$row["pret"].'lei</p>
                      	<form action="includes/update-cart.inc.php" method="POST">
         					<input type="hidden" name="denumire" value="'.$row["denumire"].'">

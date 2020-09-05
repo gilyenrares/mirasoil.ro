@@ -4,7 +4,7 @@
       $_SESSION['previousSessionUrl'] = $_SESSION['currentSessionUrl'];
     }
     $_SESSION['currentSessionUrl'] = $_SERVER['REQUEST_URI'];
-    include'error-system.sec.php';
+    
     ?>
 <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
     <div class="container-fluid">
@@ -26,3 +26,4 @@
       </div>
     </div>
 </nav>
+<?php include'error-system.sec.php'; ?>

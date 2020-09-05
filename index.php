@@ -239,18 +239,18 @@
                 <div class="col-md-6 ">
                     <form class="contact-form " action="includes/contact.inc.php" method="POST">
                         <div class="form-group ">
-                            <input type="text " name="name" class="form-control " placeholder="Numele dumneavoastră " required="required">
+                            <input type="text " name="name" class="form-control contact-control  " placeholder="Numele dumneavoastră " required="required">
                         </div>
                         <div class="form-group ">
-                            <input type="tel" name="phone" class="form-control " placeholder="Număr de telefon " required="required">
+                            <input type="tel" name="phone" class="form-control contact-control  " placeholder="Număr de telefon " required="required">
                         </div>
                         <div class="form-group ">
-                            <input type="email " name="email" class="form-control " placeholder="Email " required="required">
+                            <input type="email " name="email" class="form-control contact-control  " placeholder="Email " required="required">
                         </div>
                         <div class="form-group ">
-                            <textarea class="form-control " name="message" rows="4 " placeholder="Mesaj " required="required"></textarea>
+                            <textarea class="form-control contact-control  " name="message" rows="4 " placeholder="Mesaj " required="required"></textarea>
                         </div>
-                        <button type="submit" name="contact-submit" class="btn btn-primary ">Trimite mesaj</button>
+                        <button type="submit" name="contact-submit" class="btn btn-primary" data-toggle="modal" data-target="#errorsystem">Trimite mesaj</button>
                     </form>
                 </div>
                 <div class="col-md-6 contact-info ">

@@ -1,5 +1,7 @@
 /*General Styling Classes*/
-
+#list ul li {
+     list-style-type: none;
+}
 
 /*Font awesome classes*/
 .fa-check-circle {
@@ -172,6 +174,7 @@ a[data-toggle="collapse"] {
     min-height: 100vh;
     transition: all 0.3s;
     overflow-x: hidden;
+    touch-action: pan-y;
 }
 
 #sidebarCollapse {
@@ -421,7 +424,7 @@ div.col-md-6.findButton{
     padding: 15px;
 }
 
-.form-control {
+.contact-control {
     border-radius: 0!important;
     border: none!important;
 }
@@ -894,17 +897,12 @@ top: -45px;
 }
 
 .input-group-prepend span{
-width: 50px;
 background-color: #2196f3;
 color: black;
 border:0 !important;
 }
 
-input:focus{
-outline: 0 0 0 0  !important;
-box-shadow: 0 0 0 0 !important;
 
-}
 
 .remember{
 color: white;
