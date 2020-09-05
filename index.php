@@ -279,7 +279,7 @@
                 </div>
                 </div>
             </div>
-        </div>
+        
     </section>
     <!----------------Footer----------->
     <?php include 'sections/footer.sec.php'; ?>
