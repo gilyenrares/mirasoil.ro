@@ -594,7 +594,7 @@ div.col-md-6.findButton{
 
 /* The Modal (background) */
 
-.modal {
+.modal-c {
     display: none;
     position: fixed;
     z-index: 1;
@@ -610,7 +610,7 @@ div.col-md-6.findButton{
 
 /* Modal Content */
 
-.modal-content {
+.modal-content-c {
     position: relative;
     background-color:#0f0d0d;
     margin: auto;
@@ -622,7 +622,7 @@ div.col-md-6.findButton{
 
 /* The Close Button */
 
-.close {
+.close-c {
     color: #fff !important;
     background-color: black;
     position: absolute;

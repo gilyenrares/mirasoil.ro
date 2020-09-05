@@ -95,9 +95,9 @@
         </div>
     </div>
 
-    <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
+    <div id="myModal" class="modal modal-c">
+        <span class="close close-c cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content modal-content-c">
 
             <div class="mySlides">
                 <div class="numbertext">1 / 20</div>

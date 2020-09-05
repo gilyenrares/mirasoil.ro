@@ -20,7 +20,7 @@
 <?php include'sections/navigation.sec.php' ?>
 <div class="container">
     <h3>Contul Meu</h3>
-    <form action="includes/signup.inc.php" method="POST">
+    <form action="includes/details-uploader.inc.php" method="POST">
         <div class="row">
             <div class="col input-group form-group" id="Nume">
                 <div class="input-group-prepend">
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="form-group">
-            <button type="submit" name="signup-submit" class="btn btn-primary px-5" data-toggle="modal" data-target="#errorsystem">Aplică Modificările</button>
+            <button type="submit" name="details-update-submi" class="btn btn-primary px-5" data-toggle="modal" data-target="#errorsystem">Aplică Modificările</button>
         </div>
     </form>
 </div>
