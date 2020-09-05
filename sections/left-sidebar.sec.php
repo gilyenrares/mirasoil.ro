@@ -74,6 +74,15 @@
                         </ul>
                     </li>'; 
             }
+            if ($rest === 'produse.php') {
+                echo '<li class="active">
+                        <a href="produse.php"><i class="fas fa-store-alt"></i> Magazin</a>
+                    </li>';  
+            } else {
+                echo '<li>
+                        <a href="produse.php"><i class="fas fa-store-alt"></i> Magazin</a>
+                    </li>';
+            }
             echo '<li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-users"></i> Social</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
