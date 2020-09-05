@@ -275,7 +275,8 @@
                     <iframe class="embed-responsive embed-responsive-1by1" id="fbsection" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmirasoil16%2Fposts%2F130384935324771" height="611" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 </div>
                 <div class="col-md-5 m-3">
-                    <iframe class="embed-responsive embed-responsive-1by1" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmirasoil16%2Fposts%2F158982025798395" height="611"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    <div class="fb-post" data-href="https://www.facebook.com/mirasoil16/posts/172198311143433" data-show-text="true" data-width=""><blockquote cite="https://www.facebook.com/mirasoil16/posts/172198311143433" class="fb-xfbml-parse-ignore"><p>Pachet promoțional: 2 sticluțe de ulei esențial de lavandă + 1 sticluță de apă florală la prețul de 50 de lei..</p>Posted by <a href="https://www.facebook.com/mirasoil16/">MiraSoil</a> on&nbsp;<a href="https://www.facebook.com/mirasoil16/posts/172198311143433">Thursday, September 3, 2020</a></blockquote></div>
+                </div>
                 </div>
             </div>
         </div>
