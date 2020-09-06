@@ -934,3 +934,26 @@ color: white;
 .links a{
 margin-left: 4px;
 }
+/*PLACE ORDER*/
+#checkout .form-control1 {
+    height: 40px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+#checkout .form-control1:hover{
+    box-shadow: 0 0 16px rgba(34, 167, 240,.2);
+
+}
+.checkout-info {
+    text-align: center;
+    border-bottom: 2px solid gray;
+}
