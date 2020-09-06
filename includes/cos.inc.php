@@ -6,7 +6,6 @@ if (isset($_POST["add-item-submit"])) {
 	$pret = filter_input(INPUT_POST, "pret"); 
 	$image = filter_input(INPUT_POST, "image");
 	$cantitate = filter_input(INPUT_POST, "cantitate");
-	$_SESSION['activityStatus'] = 'Post Confirm!';
 	// verifica daca cosul contine produse
 	if (isset($_SESSION["cos"])) {
 		//cate produse sunt in cos

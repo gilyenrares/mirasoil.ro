@@ -621,6 +621,9 @@ div.col-md-6.findButton{
 .modal-dialog-centered {
     display: block !important;
 }
+.mt-35 {
+    margin-top: 35vh !important;
+}
 .modal-dialog-centered::before{
     display: none !important;
 }

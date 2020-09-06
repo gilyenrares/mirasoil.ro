@@ -16,7 +16,7 @@ if (isset($_POST['signup-submit'])) {
     $_SESSION['tempnume'] = $nume;
     $_SESSION['tempEmail'] = $email;
     $_SESSION['activityStatus'] = 'Înregistrare incompletă ...<br> Toate câmpurile sunt obligatorii!';
-    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+    header("Location: ..".$_SESSION['currentSessionUrl']."");
     exit();
   }
 
@@ -25,7 +25,7 @@ if (isset($_POST['signup-submit'])) {
     $_SESSION['tempnume'] = $nume;
     $_SESSION['tempEmail'] = $email;
     $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> Numele introdus este invalid!';
-    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+    header("Location: ..".$_SESSION['currentSessionUrl']."");
     exit();
   }
   //Method that checks if the First Name entered is valid and returns the user to signup with the valid info autofilled
@@ -33,7 +33,7 @@ if (isset($_POST['signup-submit'])) {
     $_SESSION['tempnume'] = $nume;
     $_SESSION['tempEmail'] = $email;
     $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> Prenumele introdus este invalid!';
-    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+    header("Location: ..".$_SESSION['currentSessionUrl']."");
     exit();
   }
   //Method that checks if the First Name entered is valid and returns the user to signup with the valid info autofilled
@@ -41,7 +41,7 @@ if (isset($_POST['signup-submit'])) {
     $_SESSION['tempnume'] = $nume;
     $_SESSION['tempEmail'] = $email;
     $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> Adresa introdusa este invalida!';
-    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+    header("Location: ..".$_SESSION['currentSessionUrl']."");
     exit();
   }
 
@@ -50,7 +50,7 @@ if (isset($_POST['signup-submit'])) {
     $_SESSION['tempnume'] = $nume;
     $_SESSION['tempEmail'] = $email;
     $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> Email-ul introdus este invalid!';
-    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+    header("Location: ..".$_SESSION['currentSessionUrl']."");
     exit();
   }
 
@@ -59,13 +59,13 @@ elseif ($parola !== $repetaParola) {
   $_SESSION['tempnume'] = $nume;
   $_SESSION['tempEmail'] = $email;
   $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> Parolele introduse nu se potrivesc!';
-  header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+  header("Location: ..".$_SESSION['currentSessionUrl']."");
   exit();
 }
 //Method that checks if the password entered is valid and returns the user to signup with the valid info autofilled
 elseif (!preg_match("/^[a-zA-Z0-9\s£$%&*~#@?(){}[];:+=_,.-]*$/",$parola)) {
   $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> Parola introdusa este invalida!';
-  header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+  header("Location: ..".$_SESSION['currentSessionUrl']."");
   exit();
 }
 
@@ -81,7 +81,7 @@ elseif (!preg_match("/^[a-zA-Z0-9\s£$%&*~#@?(){}[];:+=_,.-]*$/",$parola)) {
       $_SESSION['tempnume'] = $nume;
       $_SESSION['tempEmail'] = $email;
       $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> A apărut o eroare de conexiune!';
-      header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+      header("Location: ..".$_SESSION['currentSessionUrl']."");
       exit();
     }
     //Method that retrieves the email filled by the users checks for duplicity with the database
@@ -94,7 +94,7 @@ elseif (!preg_match("/^[a-zA-Z0-9\s£$%&*~#@?(){}[];:+=_,.-]*$/",$parola)) {
         $_SESSION['tempnume'] = $nume;
         $_SESSION['tempEmail'] = $email;
         $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> Email-ul introdus este inregistrat deja!';
-        header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+        header("Location: ..".$_SESSION['currentSessionUrl']."");
         exit();
       }
       else {
@@ -109,7 +109,7 @@ elseif (!preg_match("/^[a-zA-Z0-9\s£$%&*~#@?(){}[];:+=_,.-]*$/",$parola)) {
           $_SESSION['tempnume'] = $nume;
           $_SESSION['tempEmail'] = $email;
           $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> A apărut o eroare de *conexiune!';
-          header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+          header("Location: ..".$_SESSION['currentSessionUrl']."");
           exit();
         }
         //Method that retrieves the input from users and uploads it to the database
@@ -121,7 +121,7 @@ elseif (!preg_match("/^[a-zA-Z0-9\s£$%&*~#@?(){}[];:+=_,.-]*$/",$parola)) {
           unset($_SESSION['tempnume']);
           unset($_SESSION['tempEmail']);
           $_SESSION['activityStatus'] = 'Înregistrare completă !';
-          header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+          header("Location: ..".$_SESSION['previousSessionUrl']."");
           exit();
         }
       }
@@ -132,6 +132,6 @@ elseif (!preg_match("/^[a-zA-Z0-9\s£$%&*~#@?(){}[];:+=_,.-]*$/",$parola)) {
 }
 else {
   $_SESSION['activityStatus'] = 'Hey ...Hmm. <br>I see you =) trying :))';
-  header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+  header("Location: ..".$_SESSION['previousSessionUrl']."");
   exit();
 }

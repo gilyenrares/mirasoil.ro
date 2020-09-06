@@ -2,7 +2,7 @@
  if (isset($_SESSION['activityStatus'])) {
 	echo '<!-- Modal -->
 <div class="modal fade" id="errorSystem" tabindex="-1" role="dialog" aria-labelledby="errorSystem" aria-hidden="true">
-  <div class="modal-dialog  modal-dialog-centered" role="document">
+  <div class="modal-dialog mt-35 modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header bg-primary">
         <img class="mr-5" src="img/Logo-mirasoil.png" height="50" width="50" alt="mirasoil.ro logo">

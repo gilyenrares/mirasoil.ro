@@ -12,7 +12,7 @@ if(isset($_POST['login-submit'])){
   if (empty($email) || empty($parola)) {
     $_SESSION['activityStatus'] = 'Logare incompletă ...<br> Toate câmpurile sunt obligatorii!';
     $_SESSION['tempemailName'] = $email;
-    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+    header("Location: ..".$_SESSION['currentSessionUrl']."");
     exit();
   }
    //Method that checks if the Email entered is valid and returns the user to signup with the valid info autofilled
@@ -20,7 +20,7 @@ if(isset($_POST['login-submit'])){
     $_SESSION['tempnume'] = $nume;
     $_SESSION['tempEmail'] = $email;
     $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> Email-ul introdus este invalid!';
-    header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+    header("Location: ..".$_SESSION['currentSessionUrl']."");
     exit();
   }
   //Method that checks if the email exists in the database
@@ -34,7 +34,7 @@ if(isset($_POST['login-submit'])){
     //Method that check if the sql can run inside the database without error
     if (!mysqli_stmt_prepare($stmt, $sql)) {
       $_SESSION['activityStatus'] = 'Logare incompletă ...<br> A apărut o eroare de conexiune!';
-      header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+      header("Location: ..".$_SESSION['currentSessionUrl']."");
       exit();
     }
 
@@ -60,20 +60,20 @@ if(isset($_POST['login-submit'])){
           $_SESSION['emailUtil'] = $row['emailUtil'];
           $_SESSION['activityStatus'] = 'Logare completă! Bine ai revenit, '.$row['numeUtil'].'! ';
           unset($_SESSION['tempemailName']);
-          header("Location: ..".$_SESSION['previousSessionUrl'.""]);
+          header("Location: ..".$_SESSION['previousSessionUrl']."");
           exit();
         }
         else {
           $_SESSION['tempemailName'] = $email;
           $_SESSION['activityStatus'] = 'Logare incompletă ...<br> Parola introdusă este incorectă!';
-          header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+          header("Location: ..".$_SESSION['currentSessionUrl']."");
           exit();
         }
       }
       else{
         $_SESSION['tempemailName'] = $email;
         $_SESSION['activityStatus'] = 'Logare incompletă ...<br> Numele de utilizator folosit nu exista in baza de date!';
-        header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+        header("Location: ..".$_SESSION['currentSessionUrl']."");
         exit();
       }
     }
@@ -81,6 +81,6 @@ if(isset($_POST['login-submit'])){
 }
 else {
   $_SESSION['activityStatus'] = 'Hey ...Hmm. <br>I see you =) trying :))';
-  header("Location: ..".$_SESSION['previousSessionUrl'.""]);
+  header("Location: ..".$_SESSION['previousSessionUrl']."");
   exit();
 }

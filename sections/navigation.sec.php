@@ -4,7 +4,12 @@
       $_SESSION['previousSessionUrl'] = $_SESSION['currentSessionUrl'];
     }
     $_SESSION['currentSessionUrl'] = $_SERVER['REQUEST_URI'];
-    
+    function pre_r($array) {
+            echo '<pre>';
+            print_r($array);
+            echo '</pre>';
+        }
+        pre_r($_SESSION); 
     ?>
 <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
     <div class="container-fluid">
