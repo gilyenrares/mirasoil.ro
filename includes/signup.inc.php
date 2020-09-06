@@ -62,6 +62,12 @@ elseif ($parola !== $repetaParola) {
   header("Location: ..".$_SESSION['currentSessionUrl'.""]);
   exit();
 }
+//Method that checks if the password entered is valid and returns the user to signup with the valid info autofilled
+elseif (!preg_match("/^[a-zA-Z0-9\s£$%&*~#@?(){}[];:+=_,.-]*$/",$parola)) {
+  $_SESSION['activityStatus'] = 'Înregistrare incompletă ... <br> Parola introdusa este invalida!';
+  header("Location: ..".$_SESSION['currentSessionUrl'.""]);
+  exit();
+}
 
   //Method that checks if the email exists in the database
   else {

@@ -618,7 +618,12 @@ div.col-md-6.findButton{
     width: 90%;
     max-width: 1200px;
 }
-
+.modal-dialog-centered {
+    display: block !important;
+}
+.modal-dialog-centered::before{
+    display: none !important;
+}
 
 /* The Close Button */
 

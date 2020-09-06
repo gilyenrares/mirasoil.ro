@@ -16,7 +16,7 @@ if (isset($_GET['codProdus'])) {
 			echo '<div class="container card m-5">
                     <div class="row">
                         <div class="col-md-6 p-0">
-                            <img src="'.$row["image"].' "alt="'.$row["denumire"].'width="400" height="400">
+                            <img src="'.$row["image"].'" alt="'.$row["denumire"].'" width="400" height="400">
                         </div>
                         <div class="details col-md-6">
                         <h3 class="product-title">'.$row["denumire"].'</h3>
@@ -26,9 +26,13 @@ if (isset($_GET['codProdus'])) {
                     <h4 >'.$stocCurent.'</h4>
                     <hr>
                     <div class="btn-group cart">
-                        <button type="button" class="btn btn-success">
-                            Adaugă în coș 
-                        </button>
+                      <form action="includes/cos.inc.php?action=add&codProdus='.$row["codProdus"].'" method="POST">
+                        <input type="hidden" name="denumire" value="'.$row["denumire"].'">
+                        <input type="hidden" name="pret" value="'.$row["pret"].'">
+                        <input type="hidden" name="image" value="'.$row["image"].'">
+                        <input type="hidden" min="1" max="'.$row["stoc"].'" name="cantitate" value="1">
+                        <button  type="submit" name="add-item-submit" class="btn btn-success my-3" data-toggle="modal" data-target="#errorsystem">Adaugă în coș</button>	
+                      </form>
                     </div>
                     <div class="btn-group wishlist">
                         <button type="button" class="btn btn-danger">
