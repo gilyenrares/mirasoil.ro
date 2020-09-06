@@ -1,17 +1,16 @@
 <?php
-if (isset($_POST['details-update-submit'])) {
+if (isset($_POST['update-info-submit'])) {
   session_start();
 
   require 'dbh.inc.php';
   $tempId = $_SESSION['utilId'];
-  $email = $_POST['email'];
   $nume = $_POST['nume'];
   $prenume = $_POST['prenume'];
   $adresa = $_POST['adresa'];
   $parola = $_POST['parola'];
 
 //Method that checks empty fields and returns the user to signup with the valid info autofilled
-  if (empty($email) || empty($nume) || empty($prenume) || empty($adresa) || empty($parola)) {
+  if ( empty($nume) || empty($prenume) || empty($adresa) || empty($parola)) {
     $_SESSION['activityStatus'] = 'Actualizare incompletă ...<br> Toate câmpurile sunt obligatorii!';
     header("Location: ..".$_SESSION['currentSessionUrl'.""]);
     exit();
@@ -28,22 +27,28 @@ if (isset($_POST['details-update-submit'])) {
     header("Location: ..".$_SESSION['currentSessionUrl'.""]);
     exit();
   }
-  //Method that checks if the First Name entered is valid and returns the user to signup with the valid info autofilled
+  //Method that checks if the address entered is valid and returns the user to signup with the valid info autofilled
   elseif (!preg_match("/^[a-zA-Z0-9\s,.-]*$/",$adresa)) {
     $_SESSION['activityStatus'] = 'Actualizare incompletă ... <br> Adresa introdusa este invalida!';
     header("Location: ..".$_SESSION['currentSessionUrl'.""]);
     exit();
   }
-  //Method that checks if the Email entered is valid and returns the user to signup with the valid info autofilled
-  elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $_SESSION['activityStatus'] = 'Actualizare incompletă ... <br> Email-ul introdus este invalid!';
+  //Method that checks if the password entered is valid and returns the user to signup with the valid info autofilled
+// Between start -> 
+// And end -> $
+// of the string there has to be at least one number -> (?=.*\d)
+// and at least one letter -> (?=.*[A-Za-z])
+// and it has to be a number, a letter or one of the following: !@#$% -> [0-9A-Za-z!@#$%]
+// and there have to be 4-32 characters -> {8,12}
+  elseif (!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{4,32}$/',$parola)) {
+    $_SESSION['activityStatus'] = 'Actualizare incompletă ... <br> Parola introdusa este invalida!';
     header("Location: ..".$_SESSION['currentSessionUrl'.""]);
     exit();
   }
   //Method that checks if the email exists in the database
   else {
     //SQL variable that runs an SQL statement to check the email
-    $sql = "UPDATE utilizatori SET numeUtil = ?, prenumeUtil =?, adresaUtil =?, email=? WHERE utilId = $tempId";
+    $sql = "UPDATE utilizatori SET numeUtil = ?, prenumeUtil =?, adresaUtil =?, parolaUtil=? WHERE utilId = '$tempId'";
 
         //Prepare statement initialization
         $stmt = mysqli_stmt_init($conn);
@@ -58,7 +63,7 @@ if (isset($_POST['details-update-submit'])) {
         else {
           //Variable that holds the hassed parola
           $hashedPwd = password_hash($parola, PASSWORD_DEFAULT);
-          mysqli_stmt_bind_param($stmt,"sssss", $nume, $prenume, $adresa, $email, $hashedPwd);
+          mysqli_stmt_bind_param($stmt,"ssss", $nume, $prenume, $adresa, $hashedPwd);
           mysqli_stmt_execute($stmt);
           $_SESSION['activityStatus'] = 'Actualizare completă ! <br> Actualizarea va fi vizibila la urmatoarea conectare';
           header("Location: ..".$_SESSION['currentSessionUrl'.""]);

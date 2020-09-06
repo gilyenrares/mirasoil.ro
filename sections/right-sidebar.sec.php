@@ -45,6 +45,17 @@
             } 
             echo '  </ul>
                 </li>'; 
+            if (isset($_SESSION['utilId'])) {
+                if ($rest === 'cos.php') {
+                    echo '<li class="active">
+                            <a href="cos.php"><i class="fas fa-shopping-cart"></i> Cos</a>
+                        </li>';  
+                } else {
+                    echo '<li>
+                            <a href="cos.php"><i class="fas fa-shopping-cart"></i> Cos</a>
+                        </li>';
+                }
+            }
             if ($rest === 'transport.php') {
                 echo '<li class="active">
                         <a href="transport.php"><i class="fa fa-truck"></i> Transport</a>
