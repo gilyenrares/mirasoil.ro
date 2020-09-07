@@ -163,6 +163,12 @@
                                     Transfer Bancar
                                 </a>
                                 </li>
+                                <li class="nav-item">
+                                <a data-toggle="pill" href="#nav-tab-ramburs" class="nav-link rounded-pill">
+                                    <i class="fas fa-money-bill-alt"></i>
+                                    Ramburs
+                                </a>
+                                </li>
                             </ul>
                             <!-- Credit card form content -->
                             <div class="tab-content">
@@ -239,9 +245,12 @@
                     <p class="text-muted">Pentru aceasta optiune se percepe un comision fix de 5 lei pentru fiecare transfer.
                     </p>
                 </div>
+                <div id="nav-tab-ramburs" class="tab-pane fade">
+                    <input type="checkbox" id="ramburs" name="ramburs" value="ramburs">
+                        <label for="vehicle1"> Plata se va efectua ramburs la livrare</label><br>
+                </div>
             </div>
-  </div>
-
+    </div>
 </div>
 
                 </div>
