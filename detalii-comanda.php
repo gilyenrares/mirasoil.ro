@@ -70,16 +70,57 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-5 mb-3">
-                                <label for="country">Country</label>
-                                <input type="text" class="form-control" id="zip" placeholder="" required>
-                            </div>
                             <div class="col-md-4 mb-3">
-                                <label for="state">State</label>
+                                <label for="state">Judet</label>
                                 <select class="custom-select d-block w-100" id="state" required>
-                                <option value="">Choose...</option>
-                                <option>California</option>
+                                <option value="">Alege...</option>
+                                <option>Bucuresti</option>
+                                <option>Alba</option>
+                                <option>Arad</option>
+                                <option>Arges</option>
+                                <option>Bacau</option>
+                                <option>Bihor</option>
+                                <option>Bistrita-Nasaud</option>
+                                <option>Botosani</option>
+                                <option>Brasov</option>
+                                <option>Braila</option>
+                                <option>Buzau</option>
+                                <option>Caras-Severin</option>
+                                <option>Calarasi</option>
+                                <option>Cluj</option>
+                                <option>Constanta</option>
+                                <option>Covasna</option>
+                                <option>Dambovita</option>
+                                <option>Dolj</option>
+                                <option>Galati</option>
+                                <option>Giurgiu</option>
+                                <option>Gorj</option>
+                                <option>Harghita</option>
+                                <option>Hunedoara</option>
+                                <option>Ialomita</option>
+                                <option>Iasi</option>
+                                <option>Ilfov</option>
+                                <option>Maramures</option>
+                                <option>Mehedinti</option>
+                                <option>Mures</option>
+                                <option>Neamt</option>
+                                <option>Olt</option>
+                                <option>Prahova</option>
+                                <option>Satu Mare</option>
+                                <option>Salaj</option>
+                                <option>Sibiu</option>
+                                <option>Suceava</option>
+                                <option>Teleorman</option>
+                                <option>Timis</option>
+                                <option>Tulcea</option>
+                                <option>Valcea</option>
+                                <option>Vaslui</option>
+                                <option>Vrancea</option>
                                 </select>
+                            </div>
+                            <div class="col-md-5 mb-3">
+                                <label for="country">Localitate</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="zip">Zip</label>
@@ -89,11 +130,11 @@
                         <hr class="mb-4">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="same-address">
-                            <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+                            <label class="custom-control-label" for="same-address">Adresa de livrare este aceeasi cu adresa de facturare</label>
                         </div>
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="save-info">
-                            <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                            <label class="custom-control-label" for="save-info">Salveaza informatia pentru mai tarziu</label>
                         </div>
                     </div>
                     <!-- Sectiunea Adresa de Livrare -->
@@ -176,7 +217,7 @@
                 <div id="nav-tab-paypal" class="tab-pane fade">
                     <p>Paypal este cea mai usoara modalitate de a plati online</p>
                     <p>
-                    <button type="button" class="btn btn-primary rounded-pill"><i class="fa fa-paypal mr-2"></i> Intra in contul tau PayPal</button>
+                    <button type="button" class="btn btn-primary rounded-pill"><i class="fab fa-cc-paypal"></i> Intra in contul tau PayPal</button>
                     </p>
                 </div>
 
@@ -207,7 +248,7 @@
                
                 
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Plasati comanda</button>
             </form>
             </div>
             </div>
