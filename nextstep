@@ -1,16 +1,9 @@
-cart : 
-Checkout: 
-account: nume prenume 
-		email
-		nr de tel
-		adresa
-		comenzi
-Help: intrebari frecvente			
-
-			
-sistem de erori
-interfata in engleza
-interfata cont
+Checkout: mult tati
 	comenzi 
-	editat detalii 
-
+account:  
+	nr de tel
+	tabele adresa
+	tabele comenzi
+Help: intrebari frecvente?			
+interfata in engleza	
+info@ottocar.CO.UK

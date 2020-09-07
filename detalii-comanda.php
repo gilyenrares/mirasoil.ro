@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Detalii Comanda</title>
-     <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="styles/style.css">    
@@ -33,153 +33,179 @@
             </div>
 
             <div class="row">
-            <div class="col-md-4 order-md-2 mb-2">
-            <?php include 'sections/cos-min.sec.php'; ?>
-                
-            </div>
+                <!-- Sectiunea Cosul Meu si Adresa facturare -->
+                <div class="col-md-4 order-md-2 mb-2">
+                    <?php include 'sections/cos-min.sec.php'; ?>  
+                </div>
             <div class="col-md-8 order-md-1">
-            <h4 class="mb-3">Billing address</h4>
-            <form class="needs-validation" novalidate>
-                <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label for="firstName">First name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                    Valid first name is required.
+                <form class="needs-validation" novalidate>
+                    <!-- Sectiunea Adresa de Livrare -->
+                    <h4 class="mb-3">Adresa livrare</h4><hr>
+                    <div class="card p-2 mb-3 shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Prenume</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Prenume" value="<?php echo $_SESSION['prenumeUtil']; ?>" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">Nume</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Nume" value="<?php echo $_SESSION['numeUtil']; ?>" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com" value="<?php echo $_SESSION['emailUtil']; ?>">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="tel">Număr de telefon</label>
+                                <input type="email" class="form-control" id="tel" placeholder="07xxxxxxxx" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Adresa</label>
+                            <textarea class="form-control" id="address" rows="3" required><?php echo $_SESSION['adresaUtil']; ?></textarea>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-5 mb-3">
+                                <label for="country">Country</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="state">State</label>
+                                <select class="custom-select d-block w-100" id="state" required>
+                                <option value="">Choose...</option>
+                                <option>California</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="zip">Zip</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required>
+                            </div>
+                        </div>
+                        <hr class="mb-4">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="same-address">
+                            <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="save-info">
+                            <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="lastName">Last name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                    <div class="invalid-feedback">
-                    Valid last name is required.
+                    <!-- Sectiunea Adresa de Livrare -->
+                    <h4 class="mb-3">Detalii plata</h4><hr>
+                    <div class="card p-2 mb-3 shadow-sm">
+                        <!--Formular-datele cardului -->
+                        <div class="row m-0">
+                            <div class="bg-white rounded-lg  ">
+                            <!-- Credit card form tabs -->
+                            <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                                <li class="nav-item">
+                                <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                                    <i class="fa fa-credit-card"></i>
+                                    Credit Card
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
+                                    <i class="fab fa-paypal"></i>
+                                    Paypal
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                                    <i class="fa fa-university"></i>
+                                    Transfer Bancar
+                                </a>
+                                </li>
+                            </ul>
+                            <!-- Credit card form content -->
+                            <div class="tab-content">
+
+                            <!-- credit card info-->
+                            <div id="nav-tab-card" class="tab-pane fade show active">
+                                <p class="alert alert-success">Continuati plata</p>
+                                <form role="form">
+                                <div class="form-group">
+                                    <label for="username">Numele Detinatorului</label>
+                                    <input type="text" name="username" placeholder="Popescu Alin" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardNumber">Numarul cardului</label>
+                                    <div class="input-group">
+                                    <input type="text" name="cardNumber" placeholder="Numar card" class="form-control" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text text-muted">
+                                            <i class="fab fa-cc-visa"></i>
+                                            <i class="fab fa-cc-mastercard"></i>
+                                        </span>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <label><span class="hidden-xs">Data expirarii</span></label>
+                                        <div class="input-group">
+                                        <input type="number" placeholder="Luna" name="" class="form-control" required>
+                                        <input type="number" placeholder="Anul" name="" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                    <div class="form-group mb-4">
+                                        <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                                                <i class="fa fa-question-circle"></i>
+                                        </label>
+                                        <input type="text" required class="form-control">
+                                    </div>
+                                    </div>
+
+
+
                     </div>
-                </div>
+                    <button type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm"> Confirm  </button>
+                    </form>
                 </div>
 
-                <div class="mb-3">
-                <label for="username">Username</label>
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                    <span class="input-group-text">@</span>
-                    </div>
-                    <input type="text" class="form-control" id="username" placeholder="Username" required>
-                    <div class="invalid-feedback" style="width: 100%;">
-                    Your username is required.
-                    </div>
-                </div>
+                <!-- Paypal info -->
+                <div id="nav-tab-paypal" class="tab-pane fade">
+                    <p>Paypal este cea mai usoara modalitate de a plati online</p>
+                    <p>
+                    <button type="button" class="btn btn-primary rounded-pill"><i class="fa fa-paypal mr-2"></i> Intra in contul tau PayPal</button>
+                    </p>
                 </div>
 
-                <div class="mb-3">
-                <label for="email">Email <span class="text-muted">(Optional)</span></label>
-                <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                <div class="invalid-feedback">
-                    Please enter a valid email address for shipping updates.
+                <!-- bank transfer info -->
+                <div id="nav-tab-bank" class="tab-pane fade">
+                    <h6>Detalii transfer bancar</h6>
+                    <dl>
+                    <dt>Banca</dt>
+                    <dd> TRANSILVANIA</dd>
+                    </dl>
+                    <dl>
+                    <dt>Numar cont</dt>
+                    <dd>7775877975</dd>
+                    </dl>
+                    <dl>
+                    <dt>IBAN</dt>
+                    <dd>ROxxBTRLRONCRTxxxxxxxxxx</dd>
+                    </dl>
+                    <p class="text-muted">Pentru aceasta optiune se percepe un comision fix de 5 lei pentru fiecare transfer.
+                    </p>
                 </div>
-                </div>
+            </div>
+  </div>
 
-                <div class="mb-3">
-                <label for="address">Address</label>
-                <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-                <div class="invalid-feedback">
-                    Please enter your shipping address.
-                </div>
-                </div>
+</div>
 
-                <div class="mb-3">
-                <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
                 </div>
-
-                <div class="row">
-                <div class="col-md-5 mb-3">
-                    <label for="country">Country</label>
-                    <select class="custom-select d-block w-100" id="country" required>
-                    <option value="">Choose...</option>
-                    <option>United States</option>
-                    </select>
-                    <div class="invalid-feedback">
-                    Please select a valid country.
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="state">State</label>
-                    <select class="custom-select d-block w-100" id="state" required>
-                    <option value="">Choose...</option>
-                    <option>California</option>
-                    </select>
-                    <div class="invalid-feedback">
-                    Please provide a valid state.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="zip">Zip</label>
-                    <input type="text" class="form-control" id="zip" placeholder="" required>
-                    <div class="invalid-feedback">
-                    Zip code required.
-                    </div>
-                </div>
-                </div>
-                <hr class="mb-4">
-                <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="same-address">
-                <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="save-info">
-                <label class="custom-control-label" for="save-info">Save this information for next time</label>
-                </div>
-                <hr class="mb-4">
-
-                <h4 class="mb-3">Payment</h4>
-
-                <div class="d-block my-3">
-                <div class="custom-control custom-radio">
-                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                    <label class="custom-control-label" for="credit">Credit card</label>
-                </div>
-                <div class="custom-control custom-radio">
-                    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                    <label class="custom-control-label" for="debit">Debit card</label>
-                </div>
-                <div class="custom-control custom-radio">
-                    <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                    <label class="custom-control-label" for="paypal">PayPal</label>
-                </div>
-                </div>
-                <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label for="cc-name">Name on card</label>
-                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                    <small class="text-muted">Full name as displayed on card</small>
-                    <div class="invalid-feedback">
-                    Name on card is required
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="cc-number">Credit card number</label>
-                    <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                    <div class="invalid-feedback">
-                    Credit card number is required
-                    </div>
-                </div>
-                </div>
-                <div class="row">
-                <div class="col-md-3 mb-3">
-                    <label for="cc-expiration">Expiration</label>
-                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                    <div class="invalid-feedback">
-                    Expiration date required
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="cc-cvv">CVV</label>
-                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                    <div class="invalid-feedback">
-                    Security code required
-                    </div>
-                </div>
-                </div>
+               
+                
                 <hr class="mb-4">
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
             </form>
