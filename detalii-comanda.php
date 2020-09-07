@@ -123,7 +123,7 @@
                                 <input type="text" class="form-control" id="zip" placeholder="" required>
                             </div>
                             <div class="col-md-3 mb-3">
-                                <label for="zip">Zip</label>
+                                <label for="zip">Cod Postal</label>
                                 <input type="text" class="form-control" id="zip" placeholder="" required>
                             </div>
                         </div>
