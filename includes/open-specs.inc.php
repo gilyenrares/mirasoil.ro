@@ -11,7 +11,7 @@ if (isset($_GET['codProdus'])) {
             if ($row["stoc"] ==='0') {
                 $stocCurent = 'Stoc Epuizat';
             } else {
-                $stocCurent = 'Stoc Disponibil';
+                $stocCurent = 'În stoc';
             }
 			echo '<div class="container card m-5">
                     <div class="row">
@@ -43,15 +43,20 @@ if (isset($_GET['codProdus'])) {
             </div>
                <!-- Detalis Toolbar -->
               <div class="btn-group btn-group-lg m-2 d-flex" role="group" aria-label="Toolbar">
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#desc" aria-expanded="true" aria-controls="desc">DESCRIERE</button>
                 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#prop" aria-expanded="true" aria-controls="prop">PROPRIETĂȚI</button>
                 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#util" aria-expanded="true" aria-controls="util">UTILIZĂRI</button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ing" aria-expanded="true" aria-controls="ing">INGREDIENTE</button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#more" aria-expanded="true" aria-controls="more">MAI MULTE DETALII</button> 
+                
               </div>
             <!-- Acordion interface -->
               <div class="accordion m-2" id="subinterface">
+              <div class="card bg-transparent collapse show" id="desc" area-labelledby="DESCRIERE" data-parent="#subinterface">
+                  <h5 id="list">';
+                    echo $row["descriere"];
+                    echo '</h5>
+                    </div>
               <!--PROPRIETĂȚI interface -->
-                <div class="card bg-transparent collapse show" id="prop" area-labelledby="PROPRIETĂȚI" data-parent="#subinterface">
+                <div class="card bg-transparent collapse" id="prop" area-labelledby="PROPRIETĂȚI" data-parent="#subinterface">
                   <h5 id="list">';
                     echo $row["proprietati"];
                     echo '</h5>
@@ -61,20 +66,8 @@ if (isset($_GET['codProdus'])) {
                       <h5" id="list">';
                     echo $row["utilizari"];
                      echo '</h5>
-                    </div> 
-                  <!-- INGREDIENTE interface -->
-                    <div class="card bg-transparent collapse" id="ing" area-labelledby="INGREDIENTE" data-parent="#subinterface">
-                      <h5 id="list">';
-                        echo $row["ingrediente"];
-                        echo '</h5>
-                        </div> 
-                  <!-- More interface -->
-                    <div class="card bg-transparent collapse" id="more" area-labelledby="MAI MULTE DETALII" data-parent="#subinterface">
-                      <h5 id="list">';
-                      echo "In curand";
-                      echo '</h5>
-             
-        </div> 
+                    </div>
+                   
       </div>              
     </div>    ';
 		}

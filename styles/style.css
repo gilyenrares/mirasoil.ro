@@ -776,7 +776,7 @@ img.hover-shadow {
      height: 515px;
 }
 
-.column1 {
+.column5 {
     float: left;
     width: 50%;
     padding-top: 0;
@@ -836,7 +836,7 @@ img.hover-shadow {
     padding-top: 5px;
     font-size: 25px;
 }
-.column1 {
+.column5 {
     width: 50%;
 }
 .videoclip {
@@ -851,7 +851,7 @@ img.hover-shadow {
     margin: 0;
 }
 
-.column1 {
+.column5 {
     width: 100%;
     padding-top: 0;
 }

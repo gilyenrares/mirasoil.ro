@@ -30,10 +30,10 @@
              <p class="text-centrat">Primul pas constă în recoltarea florilor de lavandă, care se face manual momentan, de 2 ori pe an. Prima recoltă are loc în luna iulie și este cea mai bogată recoltă. <br>A doua recoltă are loc în luna septembrie, însă aceasta este considerabil mai mică decât precedenta.
             </p>
             <div class="row1">
-                <div class="column1">
+                <div class="column5">
                     <iframe class="videoclip" src="https://www.youtube.com/embed/690nVZoRM5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="column1">
+                <div class="column5">
                     <p class="text-prelucrare"><span class="process-text">Imediat ce florile de lavandă au fost recoltate,</span>începe procesul de distilare prin care se obține apa cu uleiul esențial. Această metodă este una destul de complexă.
                         Florile de lavandă sunt puse într-un recipient cu capacitatea de 1000 de litri, în așa fel încât aceasta să fie compresată bine pentru a nu rămâne aer. <br>Într-un alt recipient mai mic se încălzește apa prin sistemul de ardere al lemnelor, iar când aceasta a ajuns la o temperatură suficient de ridicată, aburul este eliberat printr-un tub ermetic în recipientul cu lavandă. Astfel, aburul trece prin florile de lavandă, extrage uleiul și esența din acestea, iar printr-n alt tub ermetic ajung într-un al treile recipient, plin cu apă rece, unde prin condens se transformă în apă florală și ulei. <br>Acestea din urmă sunt colectate într-un vas mai mic. Datorită densității mult mai mari a uleiului, aceste două compoziții nu se amestecă, uleiul rămânând la suprafață, fapt ce ușurează foarte mult separarea uleiului.
 

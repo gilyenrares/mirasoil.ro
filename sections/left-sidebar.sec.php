@@ -25,6 +25,15 @@
                         <a href="about.php"><i class="far fa-address-card"></i> Despre</a>
                     </li>';
             }
+            if ($rest === 'prelucrare.php') {
+                echo '<li class="active">
+                        <a href="prelucrare.php"><i class="fas fa-hand-holding-water"></i> Prelucrare</a>
+                    </li>';  
+            } else {
+                echo '<li>
+                        <a href="prelucrare.php"><i class="fas fa-hand-holding-water"></i> Prelucrare</a>
+                    </li>';
+            }
             if ($rest === 'produse.php') {
                 echo '<li class="active"><!-- Link with dropdown items -->
                         <a class="dropdown-toggle" href="#homeSubmenu" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="homeSubmenu"><i class="fas fa-list-ol"></i> Produse</a>
