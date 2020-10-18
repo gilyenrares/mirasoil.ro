@@ -12,7 +12,9 @@
     <script type="text/javascript" src="js/main.js"></script>     
 </head>
 
-<body class="wrapper"> 
+<body class="wrapper">
+<!---Facebook SDK--->
+<?php include 'sections/sdk.inc.php' ?> 
     <!--Left Sidebar Holder --> 
     <?php include 'sections/left-sidebar.sec.php'; ?>
 

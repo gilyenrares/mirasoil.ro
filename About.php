@@ -12,6 +12,8 @@
     <script type="text/javascript" src="js/main.js"></script>  
 </head>
 <body class="wrapper">
+    <!---Facebook SDK plugin--->
+    <?php include 'sections/sdk.inc.php' ?>
 
 <!--Left Sidebar Holder --> 
     <?php include 'sections/left-sidebar.sec.php'; ?>

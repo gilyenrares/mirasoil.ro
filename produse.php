@@ -20,30 +20,7 @@
     <div id="content">
          <?php include'sections/navigation.sec.php' ?>
 <!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-       <!--------- Load Facebook SDK for JavaScript -->
- <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v7.0'
-          });
-        };
-
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }
-      (document, 'script', 'facebook-jssdk'));
-  </script>   
-      <!-- Your Chat Plugin code -->
-    <div class="fb-customerchat" attribution="setup_too0l" page_id="104814324548499" theme_color="#cb3bff"></div>
-    <div class="row p-3" id="oil">
-        <?php include'includes/get-produce.inc.php' ?>     
-    </div>
+      <?php include 'sections/sdk.inc.php' ?>
     
     <?php include 'sections/footer.sec.php'; ?>
     <script src="js/cart.js"></script>

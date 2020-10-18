@@ -23,29 +23,8 @@
     <div id="content">
          <?php include'sections/navigation.sec.php' ?>
 <!--------- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v7.0'
-          });
-        };
+      <?php include 'sections/sdk.inc.php' ?>
 
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Your Chat Plugin code -->
-      <div class="facebook"
-        attribution=setup_tool
-        page_id="104814324548499"
-  theme_color="#cb3bff">
-      </div>
 
 <!-----------Slider---------->
     <div id="slider">
