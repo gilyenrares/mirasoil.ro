@@ -23,7 +23,7 @@
     <div id="content">
          <?php include'sections/navigation.sec.php' ?>
 <!--------- Load Facebook SDK for JavaScript -->
-      <?php include 'sections/sdk.inc.php' ?>
+      <?php include 'includes/sdk.inc.php' ?>
 
 
 <!-----------Slider---------->
